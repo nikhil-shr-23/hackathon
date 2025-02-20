@@ -1,0 +1,60 @@
+.scrolling-footer {
+    position: relative;
+    background-color: white;
+    color: #fff;
+    padding: 10px;
+    overflow: hidden;
+    width: 100%;
+    /* height: 4rem; */
+  }
+  
+  .scroll-container {
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  .scroll-content {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 10%;
+    height: 4rem;
+    animation: scroll 25s ease-in-out infinite;
+  }
+  
+  .scroll-content::before,
+  .scroll-content::after {
+    content: "";
+    display: inline-block;
+    white-space: nowrap;
+  }
+  
+  .scroll-content::before {
+    margin-right: 10%; /* same as padding-left */
+  }
+  
+  .scroll-content::after {
+    margin-left: 10%; /* same as padding-left */
+  }
+  
+  .item {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 8rem; /* Reduced padding */
+    height: 4rem;
+  }
+  
+  .item img {
+    transform: scale(2); /* Adjust image size */
+    height: 2rem; /* You can also set a fixed height */
+  }
+  
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }

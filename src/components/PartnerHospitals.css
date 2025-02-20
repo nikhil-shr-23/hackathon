@@ -1,0 +1,16 @@
+.container {
+    max-width: 1200px;
+  }
+  
+  .hospital-card {
+    transition: transform 0.3s ease;
+  }
+  
+  .hospital-card:hover {
+    transform: scale(1.02);
+  }
+  
+  button {
+    text-align: center;
+  }
+  
