@@ -1,0 +1,145 @@
+/* Role selection container */
+.role-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #ebf8ff;
+}
+
+.role-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.role-container button {
+  margin: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background: #1e3a8a;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.role-container button:hover {
+  background: #1e40af;
+}
+
+
+.chat-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #ebf8ff;
+  padding: 20px;
+}
+
+.chat-box {
+  background: #fff;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+}
+
+.chat-heading {
+  font-size: 1.5rem;
+  color: #1e3a8a;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.chat-status {
+  font-size: 1rem;
+  color: #4b5563;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.messages-container {
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid #e5e7eb;
+  padding: 10px;
+  border-radius: 5px;
+  background: #f9fafb;
+  margin-bottom: 20px;
+}
+
+
+.message {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.message-left {
+  justify-content: flex-start;
+}
+
+.message-right {
+  justify-content: flex-end;
+}
+
+
+.message-bubble {
+  max-width: 70%;
+  padding: 10px 15px;
+  border-radius: 15px;
+  background: #c7d2fe;
+  color: #1e3a8a;
+  position: relative;
+}
+
+.message-left .message-bubble {
+  background: #c7d2fe;
+}
+
+.message-right .message-bubble {
+  background: #bfdbfe;
+}
+
+.message-sender {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.message-text {
+  font-size: 1rem;
+  margin: 0;
+}
+
+
+.message-form {
+  display: flex;
+}
+
+.message-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px 0 0 5px;
+  font-size: 1rem;
+}
+
+.send-button {
+  padding: 10px 20px;
+  background: #1e40af;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.send-button:hover {
+  background: #1e3a8a;
+}
