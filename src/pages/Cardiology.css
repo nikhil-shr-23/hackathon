@@ -1,0 +1,19 @@
+@import url('https://fonts.cdnfonts.com/css/sf-pro-text');
+
+.cardiology-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.cardiology-header {
+  text-align: center;
+  padding: 3rem 0;
+  background: linear-gradient(135deg, #991b1b 0%, #dc2626 100%);
+  color: white;
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+

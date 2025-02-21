@@ -1,0 +1,81 @@
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    padding: 20px 0;
+  }
+  
+  .marquee-row {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .marquee-row:hover .marquee-content {
+    animation-play-state: paused;
+  }
+  
+  .marquee-content {
+    display: flex;
+    width: max-content;
+    animation: marquee 30s linear infinite;
+    will-change: transform;
+  }
+  
+  .marquee-row.reverse .marquee-content {
+    animation-direction: reverse;
+  }
+  
+  .marquee-item {
+    flex: none;
+    margin-right: 30px;
+  }
+  
+  /* Updated review card: wider with image on left, text on right, and bg-blue-50 */
+  .review-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 350px;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #ebf8ff; /* Tailwind's bg-blue-50 */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .review-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 16px;
+  }
+  
+  .review-details {
+    text-align: left;
+  }
+  
+  .username {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 4px;
+  }
+  
+  .review {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.2;
+  }
+  
+  /* Smooth, seamless marquee animation */
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  

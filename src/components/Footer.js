@@ -9,7 +9,7 @@ const Footer=()=> {
             <a href="#">
               <div className="inline-flex items-center">
              
-                <span className="ml-2 text-lg font-bold">Health Bridge International</span>
+                <span className="ml-2 text-lg font-bold">Medbridge</span>
               </div>
             </a>
           </div>

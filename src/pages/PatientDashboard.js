@@ -7,10 +7,10 @@ import Appointments from "./Appointments";
 import { MdLogout } from "react-icons/md";
 import ProtectedRoute2 from "../utils/Protected2";
 const handleClearCookie = () => {
-  // Clear the cookie by setting its expiration date to a past date
+
   document.cookie = 'HBI-T=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
   
-  // Refresh the page
+  
   window.location.reload();
 };
 const Sidebar = () => (

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
-import AccessDeniedDialog from './DialogBox'; // Import the dialog box component
+import AccessDeniedDialog from './DialogBox'; 
 
 const ProtectedRoute = ({ element }) => {
-  const token = Cookies.get('token'); // Get the token from cookies
+  const token = Cookies.get('token'); 
   const [showDialog, setShowDialog] = useState(false);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const ProtectedRoute = ({ element }) => {
     );
   }
 
-  return element; // Return the component to be rendered
+  return element; 
 };
 
 export default ProtectedRoute;

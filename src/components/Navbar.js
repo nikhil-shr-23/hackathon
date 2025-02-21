@@ -16,34 +16,27 @@ const menuItems = [
     name: "Treatments",
     href: "#",
     subMenu: [
-      { name: "Ayurveda", href: "#" },
-      { name: "Cosmetic Surgery", href: "#" },
-      { name: "Dental Care", href: "#" },
-      { name: "Orthopedic Treatments", href: "#" },
-      { name: "Cardiology", href: "#" },
-      { name: "Fertility Treatments", href: "#" },
-      { name: "Opthamology", href: "#" },
-      { name: "Hair Transplants", href: "#" },
+      { name: "Cardiology", href: "/cardiology" },
+      { name: "Neurology", href: "/Neurology" },
+      { name: "Pediatrics", href: "/pediatrics" },
+      { name: "Surgery Department", href: "/srg" },
+      { name: "Urology", href: "/urology" },
     ],
   },
   {
     name: "Packages",
-    href: "#",
-    subMenu: [
-      { name: "Health Package", href: "#" },
-      { name: "Ultimate Health Package", href: "#" },
-      { name: "Luxury Health Packages", href: "#" },
-    ],
+    href: "Pkgpage",
+   
   },
-  { name: "Contact", href: "/contact" },
-  { name: "Compare", href: "/compare" },
+  { name: "Chatbot", href: "/chatbot" },
+  { name: "Analyzer", href: "/analysis" },
 ];
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [dropdown, setDropdown] = useState(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isAuthenticated, setIsAuthenticated] = useState(false); // State for authentication Ashish
+  const [isAuthenticated, setIsAuthenticated] = useState(false); 
   const dropdownRef = useRef(null);
 
   const toggleMenu = () => {
@@ -65,15 +58,14 @@ function Navbar() {
   };
 
   const handleMenuItemClick = () => {
-    setIsMenuOpen(false); // Close the mobile menu
+    setIsMenuOpen(false); 
   };
 
   useEffect(() => {
-    // Simulate an authentication check
-    // Replace this with your actual authentication check
+    
     const checkAuthentication = async () => {
       try {
-        const response = await axios.get("/api/auth/check"); // Replace with your API endpoint
+        const response = await axios.get("/api/auth/check"); 
         setIsAuthenticated(response.data.isAuthenticated);
       } catch (error) {
         setIsAuthenticated(false);
@@ -94,14 +86,13 @@ function Navbar() {
     <div className="relative w-full bg-white z-1">
       <div className="mx-auto flex max-w-8xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
         <div className="inline-flex items-center space-x-2">
-          <img
-            src={logo}
-            alt="Health Bridge International"
-            className="w-40 h-8"
-            style={{ borderRadius: "0px" }}
-          />
-          <NavLink to="/" className="font-bold text-lg">
-            
+          <NavLink to="/">
+            <img
+              src={logo}
+              alt="Health Bridge International"
+              className="w-40 h-8"
+              style={{ borderRadius: "0px" }}
+            />
           </NavLink>
         </div>
         <div className="hidden grow items-start lg:flex">

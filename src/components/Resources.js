@@ -1,56 +1,87 @@
-import React from 'react'
-import './Resources.css'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Resources = () => {
+  const navigate = useNavigate();
+
   const items = [
     {
-      name: 'Visa Assistance',
-      para: 'Get detailed guidance on obtaining a medical visa for your trip to India.',
+      name: 'AI-Powered Report Analysis',
+      para: 'Upload medical reports and get AI-driven insights on potential health risks and key findings.',
+      path: '/analysis'
+    },
+    {
+      name: 'Personalized Treatment',
+      para: 'Discover the best hospitals and doctors based on your diagnosis, location, and budget.',
       href: '#'
     },
     {
-      name: 'Financial Planning',
-      para: 'Learn about budgeting for your medical treatment and additional expenses.',
+      name: 'Cost & Hospital Comparison',
+      para: 'Compare treatment costs across different hospitals and countries to find the most affordable options.',
       href: '#'
     },
     {
-      name: 'Cost Comparison',
-      para: 'Compare the costs of medical procedures between different hospitals and countries.',
+      name: 'Medical Travel Assistance',
+      para: 'Get detailed guidance on visas, flights, and accommodations for your treatment abroad.',
       href: '#'
     },
     {
-      name: 'Consultation Services',
-      para: 'Schedule consultations with medical experts to discuss your treatment options.',
+      name: 'Virtual Doctor Consultation',
+      para: 'Connect with medical experts for second opinions and personalized health advice.',
       href: '#'
     },
   ];
 
+  const handleNavigation = (item) => {
+    if (item.path) {
+      navigate(item.path);
+    } else if (item.href) {
+      window.location.href = item.href;
+    }
+  };
+
   return (
-    <div className="container mx-auto p-4 pt-6">
-      <h1 className='text-2xl text-center font-bold ubuntu mt-2'>
-        Find the Right Resources with Health Bridge
+    <div className="relative min-h-screen flex flex-col items-center justify-center py-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-blue-50">
+      {/* Floating blurred gradient in the background */}
+      <div className="absolute inset-0 -z-10 flex items-center justify-center">
+        <div className="w-[60vw] h-[60vw] md:w-[40vw] md:h-[40vw] bg-gradient-to-r from-blue-50 to-blue-200 rounded-full blur-3xl opacity-40" />
+      </div>
+
+      <h1 className="text-4xl font-extrabold text-gray-800 mb-12 text-center">
+        Find the Right Resources with MedBridge
       </h1>
 
-      <div className="items flex flex-wrap gap-5 justify-center mt-4">
-        {items.map((item, index) => (
-          <div key={index} className='cards'>
-            <div className="w-[300px] rounded-md border p-4 shadow-md hover:shadow-lg transition-shadow duration-300">
-              <h1 className="text-lg font-semibold text-black">{item.name}</h1>
-              <p className="mt-3 text-sm text-gray-700">
-                {item.para}
-              </p>
-              <a
-                href={item.href}
-                className="mt-4 block rounded-sm bg-blue-600 px-4 py-2 text-xs font-semibold text-white shadow-sm hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-              >
-                Read More
-              </a>
-            </div>
+      {/* 2×2 grid for the first 4 items */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl w-full">
+        {items.slice(0, 4).map((item, index) => (
+          <div
+            key={index}
+            onClick={() => handleNavigation(item)}
+            className="bg-white rounded-xl shadow-xl p-6 cursor-pointer
+                       transition-transform transform hover:-translate-y-1 
+                       hover:shadow-2xl"
+          >
+            <h2 className="text-xl font-semibold text-gray-800 mb-2">
+              {item.name}
+            </h2>
+            <p className="text-gray-600 mb-6">
+              {item.para}
+            </p>
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                handleNavigation(item);
+              }}
+              className="inline-block py-2 px-4 bg-blue-600 text-white 
+                         font-medium rounded hover:bg-blue-700 transition-colors"
+            >
+              Get Started
+            </button>
           </div>
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Resources
+export default Resources;

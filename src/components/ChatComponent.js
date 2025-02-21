@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './ChatComponent.css'; // Make sure to create this CSS file
+import './ChatComponent.css'; 
 
 const ChatComponent = () => {
     const [isChatOpen, setIsChatOpen] = useState(false);
@@ -10,12 +10,12 @@ const ChatComponent = () => {
 
     return (
         <div>
-            {/* Chat Button */}
+            {/* this is Chhhhhat Button */}
             <div className="chat-button" onClick={toggleChat}>
                 <button>Chat Now</button>
             </div>
 
-            {/* Chat Box */}
+            {/* Chat Box idhar hai */}
             {isChatOpen && (
                 <div className="chat-box">
                     <div className="chat-header">
@@ -23,7 +23,7 @@ const ChatComponent = () => {
                         <button onClick={toggleChat}>Close</button>
                     </div>
                     <div className="chat-body">
-                        {/* Chat messages will appear here */}
+                        {/* Chat messages idhar aayenge*/}
                     </div>
                     <div className="chat-footer">
                         <input type="text" placeholder="Type a message..." />

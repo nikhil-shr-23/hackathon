@@ -1,0 +1,9 @@
+.streamlit-container {
+  padding: 2rem;
+  min-height: calc(100vh - 200px); /* Adjust based on your navbar/footer height */
+}
+
+.iframe-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}

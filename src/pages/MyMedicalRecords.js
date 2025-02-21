@@ -20,14 +20,14 @@ const MyMedicalRecords = () => {
       return;
     }
 
-    if (file.size > 5000000) { // 5MB limit for example
+    if (file.size > 5000000) { 
       setError("File size exceeds the limit of 5MB.");
       return;
     }
 
     setLoading(true);
 
-    // Simulate file upload
+    
     setTimeout(() => {
       const newRecord = {
         id: records.length + 1,

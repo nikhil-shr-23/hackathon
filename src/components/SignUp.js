@@ -1,28 +1,28 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Cookies from "js-cookie"; // Import js-cookie
+import Cookies from "js-cookie"; 
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "../images/logo.jpeg"; // Ensure this path is correct
-import { useNavigate, useLocation } from "react-router-dom"; // Import useNavigate hook from react-router-dom
+import logo from "../images/logo.jpeg"; 
+import { useNavigate, useLocation } from "react-router-dom";
 
 const SignUp = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
-    // Function to handle setting the token from URL
+   
     const handleTokenFromUrl = () => {
       const queryParams = new URLSearchParams(location.search);
       const token = queryParams.get("token");
 
       if (token) {
-        Cookies.set("token", token, { expires: 7 }); // Set cookie with a 7-day expiration
-        navigate("/"); // Redirect to profile or another page
+        Cookies.set("token", token, { expires: 7 }); 
+        navigate("/"); 
       }
     };
 
-    // Call the function to handle token extraction
+
     handleTokenFromUrl();
   }, [location.search, navigate]);
 
@@ -42,8 +42,8 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError(""); // Reset error
-    setSuccess(""); // Reset success
+    setError(""); 
+    setSuccess("");
 
     try {
       const response = await axios.post(
