@@ -41,7 +41,7 @@ const Pkgpage = () => {
         <Link
           to="/chatdoc"
           className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg shadow transition-transform hover:scale-105"
-          aria-label="Talk to a Doctor for Free Now"
+          aria-label="Talk to a Consultant for Free Now"
         >
           Talk to a Consultant for free
         </Link>
